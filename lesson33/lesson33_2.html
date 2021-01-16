@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Lesson32</title>
+</head>
+
+<body>
+    <div id="result"></div>
+    <button type="button" onclick="add()">ADD New Language</button>
+
+    <script>
+        function add() {
+            var langs = ["HTML", "CSS", "JavaScript", "Golang", "Flutter"];
+            langs[langs.length] = "Rust";
+
+            document.getElementById('result').innerHTML = langs;
+        }
+    </script>
+</body>
+
+</html>

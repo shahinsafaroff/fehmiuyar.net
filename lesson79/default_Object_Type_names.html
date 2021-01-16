@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Lesson78</title>
+</head>
+
+<body>
+    <br>
+    <div class="container-fluid mt-3">
+        <p id="result"></p>
+    </div>
+
+    <script>
+        var x1, x2, x3, x4, x5, x6, x7, x8, x9;
+        x1 = new Object();
+        x2 = new Number();
+        x3 = new String();
+        x4 = new Boolean();
+        x5 = new Array();
+        x6 = new RegExp();
+        x7 = new Function();
+        x8 = new Date();
+
+        document.getElementById('result').innerHTML =
+            "x1: " + typeof x1 + "<br>" +
+            "x2: " + typeof x2 + "<br>" +
+            "x3: " + typeof x3 + "<br>" +
+            "x4: " + typeof x4 + "<br>" +
+            "x5: " + typeof x5 + "<br>" +
+            "x6: " + typeof x6 + "<br>" +
+            "x7: " + typeof x7 + "<br>" +
+            "x8: " + typeof x8 + "<br>";
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Lesson32</title>
+</head>
+
+<body>
+    <div id="result"></div>
+    <button type="button" onclick="getExactTime()">Click</button>
+
+    <script>
+        function getExactTime() {
+            var calendar = Date.parse("September 20 1986");
+            var exactTime = new Date(calendar);
+
+            document.getElementById('result').innerHTML = exactTime;
+        }
+    </script>
+</body>
+
+</html>

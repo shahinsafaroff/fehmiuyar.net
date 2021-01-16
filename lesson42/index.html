@@ -1,0 +1,46 @@
+<!DOCTYPE html> //SWITCH CASE
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Lesson40</title>
+</head>
+
+<body>
+    <p id="result"></p>
+    <p><input type="text" id="midTerm"></p>
+    <p><input type="text" id="finalExam"></p>
+    <button type="button" onclick="scoreResult()">Final Score</button>
+
+    <script>
+        function scoreResult() {
+            var midTermScore, finalScore, message, average;
+            midTermScore = Number(document.getElementById('midTerm').value);
+            finalScore = Number(document.getElementById('finalExam').value);
+            average = midTermScore * 0.3 + finalScore * 0.7;
+            //isNAN is used to avoid NON-Number characterists
+            if (isNaN(midTermScore)) {
+                message = "The digit should be used for MidTerm Score";
+            } else if (isNaN(finalScore)) {
+                message = "The digit should be used for Final Exam score";
+            } else {
+                if (average < 45 && average >= 0) {
+                    message = "You've FAILED. Your Results are TERRIBLE and WORST!";
+                } else if (average >= 45 && average <= 60) {
+                    message = "You've PASSED. However your Results are EXTREMELY BAD!";
+                } else if (average >= 60 && average <= 80) {
+                    message = "You've PASSED. However your Results are BAD!";
+                } else if (average >= 80 && average <= 90) {
+                    message = "You've PASSED. Your Results are GOOD!";
+                } else if (average >= 90 && average <= 100) {
+                    message = "You've PASSED. Your Results are EXCELLENT!";
+                } else {
+                    message = "The Numbers and Digits you've entreed are not correct! Please enter between 0-100";
+                }
+            }
+            document.getElementById('result').innerHTML = message;
+        }
+    </script>
+</body>
+
+</html>

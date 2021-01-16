@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Lesson80</title>
+</head>
+
+<body>
+    <br>
+    <div class="container-fluid mt-3">
+        <p id="result"></p>
+    </div>
+
+    <script>
+        var people, x, message = "";
+
+        function Person(first, last, age, color) {
+            this.firstName = first;
+            this.lastName = last;
+            this.age = age;
+            this.eyeColor = color;
+            this.fullName = function() {
+                return (this.firstName + " " + this.lastName);
+            }
+
+            this.changeName = function(name) {
+                return this.firstName = name;
+            }
+
+        }
+        Person.prototype.hair = "yellow";
+        people = new Person("Shahin", "Safaroff", 34, "Brown");
+
+        people.changeName("Memezok");
+
+        document.getElementById('result').innerHTML = people.hair;
+    </script>
+</body>
+
+</html>

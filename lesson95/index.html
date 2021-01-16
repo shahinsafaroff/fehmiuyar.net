@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title id="title"> HTML DOM | JS Lesson98</title>
+</head>
+
+<body>
+    <br>
+    <div class="container-fluid mt-3" id="DivParent">
+
+        <h1 id="head" ajax="open">Javascript</h1>
+        <p id="p1">JQuery</p>
+        <p id="p2">Angular JS</p>
+        <p id="p3">React JS</p>
+        <p id="p4">Vue JS</p>
+        <p id="p5">Node JS</p>
+        <p id="p6">PHP</p>
+        <p id="p7">ASP.NET</p>
+        <p id="p8">JSP</p>
+        <p class="color">ColdFusion</p>
+        <span class="">For making Israel to one of the most powerful Countries in the World</span>
+        <h5>MYSQL</h5>
+        <h5>MYSQL</h5>
+        <h5>ORACLE</h5>
+        <p id="resultEnd"></p>
+    </div>
+
+    <script>
+        //var elementNodes = document.querySelector('#title').innerHTML;
+        //var elementNodes = document.querySelector('#title').childNodes[0].nodeValue;
+        //var elementNodes = document.querySelector('#title').firstChild.nodeValue;
+        //var elementNodes = document.querySelector('#DivParent').firstChild.nodeValue;
+        //var elementNodes = document.querySelector('#head').firstChild.nodeValue;
+        //var elementNodes = document.querySelector('#title').nodeName;
+        //var elementNodes = document.querySelector('#head').getAttributeNode('id').nodeName;
+        //var elementNodes = document.querySelector('#head').getAttributeNode('id').nodeName;
+        //var elementNodes = document.querySelector('#p4').childNodes[0].nodeName;
+        //var elementNodes = document.body.nodeName;
+        //var elementNodes = document.documentElement.nodeName;
+        var elementNodes = document.querySelector('#head').getAttributeNode('ajax').nodeValue;
+        alert(elementNodes);
+    </script>
+</body>
+
+</html>

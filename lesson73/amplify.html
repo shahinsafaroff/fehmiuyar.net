@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Lesson73</title>
+</head>
+
+<body>
+    <br>
+
+    <p><input type="text" id="data1" name="data1"></p>
+    <p><input type="text" id="data2" name="data2"></p>
+    <p id="result"></p>
+    <!-- <a href="back.html">Click Back</a> -->
+
+    <script>
+        var result, times, data1, data2;
+        result = document.getElementById('result');
+        times = setInterval(process, 1000);
+
+        function process() {
+            var data1, data2, resultValue;
+            data1 = Number(document.getElementById('data1').value);
+            data2 = Number(document.getElementById('data2').value);
+            resultValue = data1 * data2;
+            result.innerHTML = resultValue;
+        }
+    </script>
+</body>
+
+</html>

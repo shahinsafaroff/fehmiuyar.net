@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Lesson32</title>
+</head>
+
+<body>
+    <div id="result"></div>
+    <button type="button" id="externalJS">Call JS</button>
+
+    <script>
+        "use strict";
+        var getJS = document.getElementById('externalJS');
+        getJS.onclick = function() {
+            var scriptCreate = document.createElement("script");
+            scriptCreate.src = "js/message.js";
+            scriptCreate.type = "text/javascript";
+            document.getElementsByTagName("head")[0].appendChild(scriptCreate);
+        }
+    </script>
+</body>
+
+</html>

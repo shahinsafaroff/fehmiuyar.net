@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Lesson89</title>
+</head>
+
+<body>
+    <div class="container-fluid mt-3">
+
+        <p id="result"></p>
+        <img src="img/off.png" width="200" height="360" alt="Switched off" id="picture" />
+        <button type="button" class="btn btn-dark" onclick="Javascript:changeCSS()">Change</button>
+
+    </div>
+
+    <script>
+        function changeCSS() {
+            document.querySelector('#picture').src = "img/on.png";
+            // document.querySelector('#picture').setAttribute("width", "350")
+        }
+    </script>
+</body>
+
+</html>

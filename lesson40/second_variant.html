@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Lesson40</title>
+</head>
+
+<body>
+    <p id="result"></p>
+
+    <button type="button" onclick="verify()">Let's Check</button>
+
+    <script>
+        function verify() {
+            let note = 59,
+                message = "",
+                result;
+            result = note >= 60 ? "You've PASSED your TEST" : "You've FAILED your TEST";
+            document.getElementById('result').innerHTML = result;
+        }
+    </script>
+</body>
+
+</html>

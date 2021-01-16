@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Lesson73</title>
+</head>
+
+<body>
+    <br>
+
+    <button type="button" onclick="deleteTime=setTimeout(process,2000)">Click Set Timeout</button>
+    <button type="button" onclick="clearTimeout(deleteTime)">Stop</button>
+    <button type="button" onclick="clearInterval(times)">Stop Interval</button>
+    <p id="result"></p>
+    <!-- <a href="back.html">Click Back</a> -->
+
+    <script>
+        var result, times;
+        result = document.getElementById('result');
+        times = setInterval(process, 1000);
+
+        function process() {
+            var d = new Date();
+            result.innerHTML = d.toLocaleDateString();
+        }
+    </script>
+</body>
+
+</html>

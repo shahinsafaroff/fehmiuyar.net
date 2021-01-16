@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Lesson38</title>
+</head>
+
+<body>
+    <p id="result"></p>
+
+    <button type="button" onclick="verify()">Let's Check</button>
+
+    <script>
+        function verify() {
+            var x = true;
+            var y = true;
+            if (x == y) {
+                document.getElementById('result').innerHTML = "These are equal";
+            } else {
+                document.getElementById('result').innerHTML = "these are not equal";
+            }
+        }
+    </script>
+</body>
+
+</html>

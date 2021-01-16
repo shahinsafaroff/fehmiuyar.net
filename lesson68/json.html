@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Lesson68</title>
+</head>
+
+<body>
+    <div id="result"></div>
+    <button type="button" onclick="jsonic()">Json Parser</button>
+
+    <script>
+        function jsonic() {
+            var txt = '{' +
+                '"langs": [' +
+
+                '{"firstName": "Node","lastName": "JS"},' +
+                '{"firstName": "Angular","lastName": "JS"},' +
+                '{"firstName": "React", "lastName": "JS"}, ' +
+                '{"firstName": "Vue", "lastName": "JS"}' +
+                ']' +
+                '}';
+            var obj = JSON.parse(txt);
+            document.getElementById('result').innerHTML = obj.langs[0].firstName + " " + obj.langs[0].lastName;
+        }
+    </script>
+</body>
+
+</html>

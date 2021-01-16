@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Lesson37</title>
+</head>
+
+<body>
+    <p id="result"></p>
+    <p id="result2"></p>
+    <button type="button" onclick="pc()">Sorted By Year</button>
+
+    <script>
+        function pc() {
+            var pc = [{
+                type: "Asus",
+                ram: "16GB",
+                year: 2016
+            }, {
+                type: "HP",
+                ram: "12GB",
+                year: 2018
+            }, {
+                type: "IBM",
+                ram: "32GB",
+                year: 2013
+            }];
+            var i;
+            for (i = 0; i < pc.length; i++)
+                pc.sort(function(x, y) {
+                    return x.year - y.year;
+                });
+            document.getElementById('result').innerHTML = pc[i].type + ":" + pc[i].ram + ":" + pc[i].year;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Lesson40</title>
+</head>
+
+<body>
+    <p id="result"></p>
+    <p><input type="text" id="midTerm"></p>
+    <p><input type="text" id="finalExam"></p>
+    <button type="button" onclick="noteResult()">Final Score</button>
+
+    <script>
+        function noteResult() {
+            var midTermNote, finalNote, message, average;
+            midTermNote = Number(document.getElementById('midTerm').value);
+            finalNote = Number(document.getElementById('finalExam').value);
+            average = midTermNote * 0.3 + finalNote * 0.7;
+            //isNAN is used to avoid NON-Number characterists
+            if (isNaN(midTermNote)) {
+                message = "The digit should be used for MidTerm Score";
+            } else if (isNaN(finalNote)) {
+                message = "The digit should be used for Final Exam score";
+            } else {
+                if (average < 45 && average >= 0) {
+                    message = "You've FAILED. Your Results are TERRIBLE and WORST!";
+                } else if (average >= 45 && average <= 60) {
+                    message = "You've PASSED. However your Results are EXTREMELY BAD!";
+                } else if (average >= 60 && average <= 80) {
+                    message = "You've PASSED. However your Results are BAD!";
+                } else if (average >= 80 && average <= 90) {
+                    message = "You've PASSED. Your Results are GOOD!";
+                } else if (average >= 90 && average <= 100) {
+                    message = "You've PASSED. Your Results are EXCELLENT!";
+                } else {
+                    message = "The Numbers and Digits you've entreed are not correct! Please enter between 0-100";
+                }
+            }
+            document.getElementById('result').innerHTML = message;
+        }
+    </script>
+</body>
+
+</html>

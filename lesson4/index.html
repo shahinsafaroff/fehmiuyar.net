@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Lesson4</title>
+</head>
+
+<body>
+    <input type="button" value="Open Light" onclick="openLight();">
+    <img src="img/bulb_off.png" alt="Light" id="Picture">
+    <input type="button" value="Close Light" onclick="closeLight();">
+    <script>
+        function openLight() {
+            document.getElementById('Picture').src = "img/bulb_on.png";
+        }
+
+        function closeLight() {
+            document.getElementById('Picture').src = "img/bulb_off.png";
+        }
+    </script>
+</body>
+
+</html>

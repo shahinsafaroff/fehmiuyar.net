@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Lesson68</title>
+</head>
+
+<body>
+    <br>
+    <button type="button" onclick="openWindow()">New Open Window</button>
+    <button type="button" onclick="resizeWindow()">Resize Window</button>
+    <button type="button" onclick="moveWindow()">Move Window</button>
+    <button type="button" onclick="closeWindow()">Close Window</button>
+    <div id="result"></div>
+    <script>
+        var result, newWindow;
+        result = document.getElementById('result');
+
+        function openWindow() {
+            newWindow = window.open("https://github.com", "width=600, height=400");
+            newWindow.document.write("This Windows was opened by Javascript");
+        }
+
+        function resizeWindow() {
+            newWindow.resizeTo(1000, 800);
+        }
+
+        function moveWindow() {
+            newWindow.moveTo(450, 450);
+        }
+
+        function closeWindow() {
+            newWindow.close();
+        }
+    </script>
+</body>
+
+</html>

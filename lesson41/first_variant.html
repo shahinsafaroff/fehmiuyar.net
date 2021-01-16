@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Lesson40</title>
+</head>
+
+<body>
+    <p id="result"></p>
+    <p><input type="text" id="midterm"></p>
+    <p><input type="text" id="final"></p>
+    <button type="button" onclick="noteResult()">Final</button>
+
+    <script>
+        function noteResult() {
+            var midtermNote, finalNote, message, average;
+            midtermNote = Number(document.getElementById('midterm').value);
+            finalNote = Number(document.getElementById('final').value);
+            average = midtermNote * 0.3 + finalNote * 0.7;
+            //isNAN is used to avoid NON-Number characterists
+            if (isNaN(midtermNote)) {
+                message = "The digit should be used for MidTerm score";
+            } else if (isNaN(finalNote)) {
+                message = "The digit should be used for Final score";
+            } else {
+                message = (average >= 60) ? "You've PASSED" : "You've FAILED";
+            }
+            document.getElementById('result').innerHTML = message;
+        }
+    </script>
+</body>
+
+</html>

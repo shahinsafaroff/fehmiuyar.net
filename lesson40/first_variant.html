@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Lesson40</title>
+</head>
+
+<body>
+    <p id="result"></p>
+
+    <button type="button" onclick="verify()">Let's Check</button>
+
+    <script>
+        function verify() {
+            var note = 59,
+                message = "",
+                result;
+            if (note >= 60) {
+                document.getElementById('result').innerHTML = "You've PASSED your TEST";
+            } else {
+                document.getElementById('result').innerHTML = "You've FAILED your TEST";
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Lesson32</title>
+</head>
+
+<body>
+    <div id="result"></div>
+    <button type="button" onclick="langsList()">Click</button>
+
+    <script>
+        function langsList() {
+            var text, i;
+            var langs = ["HTML", "CSS", "JavaScript", "Golang", "Flutter"];
+            text = "<ol>";
+            for (i = 0; i < langs.length; i++) {
+                text += "<li>" + langs[i] + "</li>";
+            }
+            text += "</ol>";
+
+            document.getElementById('result').innerHTML = text;
+        }
+    </script>
+</body>
+
+</html>
